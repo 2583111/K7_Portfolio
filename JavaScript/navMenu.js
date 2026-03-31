@@ -2,7 +2,7 @@ const root = "";
 // Defines a constant variable 'root' with the string value "..", which likely represents the root directory for URLs.
 
 export const menuItems = [
-  { name: "HOME", href: root + "index.html" },
+  { name: "HOME", href: `${root}index.html` },
   { name: "ART", href: `${root}ART/index.html` },
   { name: "ANIMATION", href: `${root}ANIMATIONS/index.html` },
   { name: "VR", href: `${root}VR/index.html` },
