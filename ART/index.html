@@ -23,10 +23,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Draggable.min.js"></script>
 
     <!--Javascripts-->
-  <script type="module">
+    <script type="module">
     import { initialise } from "../JavaScript/navMenu.js";
-    // call initialise once module is loaded
-    initialise("ART"); // or keep "ANIMATION" if that was intentional
+    // create the DOM markup for the menu items first
+    document.addEventListener("DOMContentLoaded", () => initialise("ART"));
   </script>
   <script type="module" src="../JavaScript/artPopulator.js"></script>
 

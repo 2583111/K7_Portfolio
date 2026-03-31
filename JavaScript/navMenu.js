@@ -1,12 +1,12 @@
-const root = ''; 
+const root = '..';
 
 export const menuItems = [
-  { name: "HOME", href: 'index.html' },
-  { name: "ART", href: 'ART/index.html' },
-  { name: "GAMES", href: 'GAMES/index.html' },
-  { name: "ANIMATIONS", href: 'ANIMATIONS/index.html' },
-  { name: "VR", href: 'VR/index.html' },
-  { name: "ABOUT ME", href: 'ABOUTME/index.html' }
+  { name: "HOME", href: root + "/index.html" },
+  { name: "ART", href: `${root}/ART/index.html` },
+  { name: "ANIMATIONS", href: `${root}/ANIMATIONS/index.html` },
+  { name: "VR", href: `${root}/VR/index.html` },
+  { name: "GAMES", href: `${root}/GAMES/index.html` },
+  { name: "ABOUT ME", href: `${root}/ABOUTME/index.html` }
 ];
 // Exports a constant array 'menuItems', each object representing a menu item with 'name' and 'href'.
 // The 'href' is constructed using the 'root' variable, with different paths for each menu item.
@@ -28,6 +28,7 @@ export function initialise(currentPage) {
       // Exits the function early.
     }
     nav = document.createElement("nav");
+    nav.setAttribute("aria-hidden, true")
     // Creates a new <nav> element.
     // Ensure the nav is exposed to assistive technologies (do not hide it).
     // nav.setAttribute("aria-hidden", "true");
