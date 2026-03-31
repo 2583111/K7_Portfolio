@@ -1,0 +1,56 @@
+#imageWrapper {
+  /* set your side-nav width here (override globally if needed) */
+  --side-nav-width: 190px;
+  --side-gap: 10px;
+
+  /* space from side nav + 10px gap */
+  margin-left: calc(var(--side-nav-width) + var(--side-gap));
+  max-width: calc(100% - var(--side-nav-width) - var(--side-gap));
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px; /* space between images */
+  padding-top: 60px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#imageWrapper img {
+  max-width: 265px; /* images will shrink to fit container width */
+  height: 275px;    /* maintain aspect ratio */
+  display: block;  /* remove inline spacing */
+  border-radius: 12px; /* optional: rounded corners */
+
+}
+
+.randomContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.art-btn{
+
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    align-self: flex-end;
+}
+
+.art-btn:hover {
+  transform: translateX(6px);
+  color: #000000;
+}
+
+
+body{
+ 
+    overflow-x: hidden; /* Disable horizontal scroll */
+
+}

@@ -1,0 +1,67 @@
+body{
+
+    background-color: #89cc04;
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h1{
+    color: #89cc04;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+
+/* The side navigation menu */
+.slide-menu, header {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+/* Sidebar links */
+.slide-menu a {
+  display: block;
+  color: #89cc04;
+  padding: 26px;
+  text-align: center;
+  text-decoration: none;  
+}
+
+.slide-menu a:hover:not(.active) {
+  color: #000000b1;
+}
+
+ul.slide-menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Active/current link */
+.slide-menu a.active {
+  color: #000000;
+}
+
+
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}

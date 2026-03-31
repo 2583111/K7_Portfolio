@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio Homepage" />
+  <meta name="author" content="Kesavan Naicker" />
+  <meta name="keywords" content="Portfolio, Art, VR, Animations, About Me, K7" />
+  <title>Portfolio</title>
+
+  <!-- FONTS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald" />
+
+  <!--CSS -->
+  <link rel="stylesheet" href="../CSS/Main_Style.CSS" />
+  <link rel="stylesheet" href="../CSS/Footer_Style.CSS" />
+  <link rel="stylesheet" href="../CSS/LinkFill_Style.CSS" />
+  <link rel="stylesheet" href="../CSS/ArtPage_Style.CSS" />
+  <link rel="stylesheet" href="../CSS/ModalImage_Style.CSS" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Draggable.min.js"></script>
+
+    <!--Javascripts-->
+    <script type="module">
+    import { initialise } from "../JavaScript/navMenu.js";
+    // create the DOM markup for the menu items first
+    document.addEventListener("DOMContentLoaded", () => initialise("ART"));
+  </script>
+  <script type="module" src="../JavaScript/artPopulator.js"></script>
+
+  
+</head>
+
+<body>
+<header>
+  <h1>PORTFOLIO</h1>
+
+  <!-- Burbger Menu -->
+  <!-- <h2>
+    <button class="hamburgBtn" id="menuButton" aria-controls="siteMenu" aria-expanded="false" aria-label="Toggle menu">
+      <svg class="burger" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true" focusable="false">
+        <path id="barTop"    d="M4 6 L20 6"  fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.6"/>
+        <path id="barMid"    d="M4 12 L20 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.6"/>
+        <path id="barBottom" d="M4 18 L20 18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.6"/>
+      </svg>
+    </button>
+  </h2> -->
+  
+</header>
+
+  <main>
+
+    <div id="imageRow">
+
+    </div>
+
+    <div id ="modalOverlay">
+      <button class="prev" aria-label="Previous image"> < </button>
+      <img id="modalImage" src="" alt="Full-size artwork">
+      <button class="next" aria-label="Next image"> > </button>
+    </div>
+     
+
+
+  </main>
+
+<footer>
+    <div class="footer-center">
+      <strong>PORTFOLIO</strong> — built by K7
+    </div>
+</footer>
+
+
+<!-- onclick needed a reference -->
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const imageRow = document.getElementById('imageRow');
+  const modalImage = document.getElementById('modalImage');
+  const prev = document.querySelector('.prev');
+  const next = document.querySelector('.next');
+  let images = [];
+  let current = 0;
+
+  function updateImages() {
+    images = Array.from(imageRow.querySelectorAll('img')).map(img => img.src);
+    if (images.length > 0 && !modalImage.src) modalImage.src = images[0];
+  }
+
+  // Allow module scripts (deferred) to populate the gallery before reading images
+  // DOMContentLoaded fires after module scripts execute, but we guard with a small timeout
+  setTimeout(updateImages, 0);
+
+  function show(index) {
+    if (images.length === 0) return;
+    current = ((index % images.length) + images.length) % images.length;
+    modalImage.src = images[current];
+  }
+
+  prev.addEventListener('click', (e) => { e.preventDefault(); show(current - 1); });
+  next.addEventListener('click', (e) => { e.preventDefault(); show(current + 1); });
+});
+</script>
+
+</body>
+</html>

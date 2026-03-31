@@ -1,0 +1,124 @@
+#imageRow {
+  column-count: 3; /* Number of columns, adjust as needed */
+  column-gap: 10px; /* Space between columns */
+  margin-left: 200px; /* space for sidebar */
+  padding-top: 10px;
+  width: calc(100% - 220px);
+  box-sizing: border-box;
+}
+
+/* Container around each image to center it and restrict size if needed */
+.artBox {
+  display: inline-block;
+  width: 100%; /* full width in column, or set specific width */
+  margin-bottom: 10px; /* space between items vertically in columns */
+}
+
+/* Image styling */
+.artBox img {
+  width: 100%; /* fit container width */
+  height: 100%; /* maintain aspect ratio */
+  display: block; /* remove inline spacing */
+  object-fit: contain; /* scale without cropping */
+  max-width: 100%; /* ensure it doesn't overflow */
+  border-radius: 12px; /* optional: rounded corners */
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s, transform 1s;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  
+}
+
+.artBox img.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect: blur the image and show a white overlay */
+.artBox {
+    position: relative; /* create a positioning context for the overlay */
+    overflow: hidden;   /* keep overlay and scaled image inside the box */
+}
+
+/* white translucent overlay (hidden by default) */
+.artBox::after {
+    content: "";
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    background: rgba(255,255,255,0.6); /* white overlay, adjust alpha as needed */
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none; /* don't block hover events */
+    border-radius: 12px; /* match the image rounding */
+}
+
+/* show overlay on hover of the container */
+.artBox:hover::after {
+    opacity: .5;
+    border-radius: 12px; /* optional: rounded corners */
+}
+
+/* apply blur and a slight scale to the image on hover */
+.artBox img:hover {
+    filter: blur(6px);
+    transform: scale(1.015);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 12px; /* optional: rounded corners */
+
+}
+
+img:hover {
+  transform: scale(1.05); /* Slightly zoom in on hover */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.infoOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #89cc04; /* text color */
+  outline: 4px solid #89cc04; /* outline for better visibility */
+  background-color: #ffffff;
+  font: 16px "Oswald", sans-serif;
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  overflow-y: auto; /* allow scrolling if content is too long */
+  font-size: 0.8em;
+}
+
+.artBox:hover .infoOverlay {
+  opacity: 1;
+}
+
+.art-title {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.art-type{
+  font-size: 1em;
+}
+
+.art-reference {
+  font: 1.2em ;
+  font-style: italic;
+}
+
+
+.art-date {
+  text-align: right;
+}   
+
+
+body{
+ 
+    overflow-x: hidden; /* Disable horizontal scroll */
+
+}
+
