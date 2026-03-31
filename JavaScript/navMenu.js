@@ -3,7 +3,7 @@ const root = ".";
 export const menuItems = [
   { name: "HOME", href: `${root}/index.html` },
   { name: "ART", href: `${root}/ART/index.html` },
-  { name: "ANIMATION", href: `${root}/ANIMATION/index.html` },
+  { name: "ANIMATION", href: `${root}/ANIMATIONS/index.html` },
   { name: "VR", href: `${root}/VR/index.html` },
   { name: "GAMES", href: `${root}/GAMES/index.html` },
   { name: "ABOUT ME", href: `${root}/ABOUTME/index.html` }
@@ -29,12 +29,12 @@ export function initialise(currentPage) {
     }
     nav = document.createElement("nav");
     // Creates a new <nav> element.
-    nav.setAttribute("aria-hidden", "true");
+    // Ensure the nav is exposed to assistive technologies (do not hide it).
+    // nav.setAttribute("aria-hidden", "true");
     // Sets the 'aria-hidden' attribute to 'true' for accessibility purposes.
     header.appendChild(nav);
     // Appends the new <nav> element inside the <header>.
   }
-
    nav.innerHTML = '';
   // Clears any existing content inside the <nav> element.
 
@@ -52,14 +52,23 @@ export function initialise(currentPage) {
   nav.appendChild(wrapper);
   // Appends the 'wrapper' div to the <nav> element.
 
-  const ul = wrapper.querySelector('ul.slide-menu-list');
+  let ul = wrapper.querySelector('ul.slide-menu-list');
   // Finds the <ul> element inside the wrapper where menu items will be inserted.
+  if (!ul) {
+    // If the list couldn't be found, create it to avoid runtime errors.
+    ul = document.createElement('ul');
+    ul.className = 'slide-menu-list';
+    ul.setAttribute('role', 'menu');
+    const inner = wrapper.querySelector('.slide-menu-inner') || wrapper;
+    inner.appendChild(ul);
+  }
 
-  for (let menuItem of menuItems) {
+  for (const menuItem of menuItems) {
     // Loops through each item in the 'menuItems' array.
     const li = document.createElement("li");
     // Creates a new <li> element for each menu item.
     li.setAttribute('role', 'none');
+    // Sets the role attribute of <li> to 'none' (indicating it has no special role).
     // Sets the role attribute of <li> to 'none' (indicating it has no special role).
 
     const a = document.createElement("a");
