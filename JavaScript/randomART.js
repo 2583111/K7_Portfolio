@@ -38,6 +38,7 @@ for (let i = 0; i < selectedImages.length; i++) {
 
   const img = document.createElement('img');
   img.src = selectedImages[i];
+  img.alt = `Artwork image ${i + 1}`;
 
   randomContainer.appendChild(img);
   container.appendChild(randomContainer);

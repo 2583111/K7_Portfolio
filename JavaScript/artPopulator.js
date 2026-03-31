@@ -343,6 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
     artBox.className = 'artBox';
 
     const img = document.createElement('img');
+    artBox.appendChild(img);
     img.src = artPieces[i].src;
 
     //Create Overlay
