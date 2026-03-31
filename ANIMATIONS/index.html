@@ -18,11 +18,11 @@
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 
-    <!--Javascripts-->
-    <script type="module">
+  <!-- Javascripts -->
+  <script type="module">
     import { initialise } from "../JavaScript/navMenu.js";
-    // create the DOM markup for the menu items first
-    document.addEventListener("DOMContentLoaded", () => initialise("ANIMATION"));
+    // call initialise once module is loaded
+    initialise("ANIMATIONS"); // or keep "ANIMATION" if that was intentional
   </script>
 
   
