@@ -1,12 +1,13 @@
-const root = '..';
+const root = "";
+// Defines a constant variable 'root' with the string value "..", which likely represents the root directory for URLs.
 
 export const menuItems = [
-  { name: "HOME", href: root + "/index.html" },
-  { name: "ART", href: `${root}/ART/index.html` },
-  { name: "ANIMATIONS", href: `${root}/ANIMATIONS/index.html` },
-  { name: "VR", href: `${root}/VR/index.html` },
-  { name: "GAMES", href: `${root}/GAMES/index.html` },
-  { name: "ABOUT ME", href: `${root}/ABOUTME/index.html` }
+  { name: "HOME", href: root + "index.html" },
+  { name: "ART", href: `${root}ART/index.html` },
+  { name: "ANIMATION", href: `${root}ANIMATIONS/index.html` },
+  { name: "VR", href: `${root}VR/index.html` },
+  { name: "GAMES", href: `${root}GAMES/index.html` },
+  { name: "ABOUT ME", href: `${root}ABOUTME/index.html` },
 ];
 // Exports a constant array 'menuItems', each object representing a menu item with 'name' and 'href'.
 // The 'href' is constructed using the 'root' variable, with different paths for each menu item.
@@ -29,12 +30,12 @@ export function initialise(currentPage) {
     }
     nav = document.createElement("nav");
     // Creates a new <nav> element.
-    // Ensure the nav is exposed to assistive technologies (do not hide it).
-    // nav.setAttribute("aria-hidden", "true");
+    nav.setAttribute("aria-hidden", "true");
     // Sets the 'aria-hidden' attribute to 'true' for accessibility purposes.
     header.appendChild(nav);
     // Appends the new <nav> element inside the <header>.
   }
+
    nav.innerHTML = '';
   // Clears any existing content inside the <nav> element.
 
@@ -52,23 +53,14 @@ export function initialise(currentPage) {
   nav.appendChild(wrapper);
   // Appends the 'wrapper' div to the <nav> element.
 
-  let ul = wrapper.querySelector('ul.slide-menu-list');
+  const ul = wrapper.querySelector('ul.slide-menu-list');
   // Finds the <ul> element inside the wrapper where menu items will be inserted.
-  if (!ul) {
-    // If the list couldn't be found, create it to avoid runtime errors.
-    ul = document.createElement('ul');
-    ul.className = 'slide-menu-list';
-    ul.setAttribute('role', 'menu');
-    const inner = wrapper.querySelector('.slide-menu-inner') || wrapper;
-    inner.appendChild(ul);
-  }
 
-  for (const menuItem of menuItems) {
+  for (let menuItem of menuItems) {
     // Loops through each item in the 'menuItems' array.
     const li = document.createElement("li");
     // Creates a new <li> element for each menu item.
     li.setAttribute('role', 'none');
-    // Sets the role attribute of <li> to 'none' (indicating it has no special role).
     // Sets the role attribute of <li> to 'none' (indicating it has no special role).
 
     const a = document.createElement("a");
