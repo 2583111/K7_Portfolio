@@ -1,13 +1,13 @@
 const images = [
-  '../IMAGES/ART/Items layout.jpg',
-  '../IMAGES/ART/Jumping Enemy Turnaround.jpg',
-  '../IMAGES/ART/Shooting Enemy Turnaround.jpg',
-  '../IMAGES/ART/Walking Enemy Turnaround.jpg',
-  '../IMAGES/ART/Venipedes All the way down.png',
-  '../IMAGES/ART/page 44.jpg',
-  '../IMAGES/ART/page 40.jpg',
-  '../IMAGES/ART/page 21.jpg',
-  '../IMAGES/ART/page 29.jpg',
+  './IMAGES/ART/Items layout.jpg',
+  './IMAGES/ART/Jumping Enemy Turnaround.jpg',
+  './IMAGES/ART/Shooting Enemy Turnaround.jpg',
+  './IMAGES/ART/Walking Enemy Turnaround.jpg',
+  './IMAGES/ART/Venipedes All the way down.png',
+  './IMAGES/ART/page 44.jpg',
+  './IMAGES/ART/page 40.jpg',
+  './IMAGES/ART/page 21.jpg',
+  './IMAGES/ART/page 29.jpg',
 
 ];
 

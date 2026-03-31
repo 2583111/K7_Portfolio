@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
       date: '2023',
     },
     {
-      src: '../IMAGES/ART/page 13.jpg',
+      src: '../IMAGES/ART/Page 13.jpg',
       title: 'Page 13',
       artType: 'Digital Art',
       reference: 'A page from a digital art project',
