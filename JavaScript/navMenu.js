@@ -1,6 +1,6 @@
-const root = '.';
+const root = '...';
 
-const menuItems = [
+export const menuItems = [
   { name: "HOME", href: `${root}/index.html` },
   { name: "ART", href: `${root}/ART/index.html` },
   { name: "ANIMATIONS", href: `${root}/ANIMATIONS/index.html` },
@@ -11,8 +11,8 @@ const menuItems = [
 // Exports a constant array 'menuItems', each object representing a menu item with 'name' and 'href'.
 // The 'href' is constructed using the 'root' variable, with different paths for each menu item.
 
-function initialise(currentPage) {
-  // Defines a function 'initialise' which takes 'currentPage' as an argument.
+export function initialise(currentPage) {
+  // Defines and exports a function 'initialise' which takes 'currentPage' as an argument.
   let nav = document.querySelector("header > nav");
   // Tries to find a <nav> element inside a <header> in the document and assigns it to 'nav'.
 
@@ -107,9 +107,5 @@ function initialise(currentPage) {
   }
 
 }
-
-// expose for non-module environments
-window.menuItems = menuItems;
-window.initialise = initialise;
 
 
