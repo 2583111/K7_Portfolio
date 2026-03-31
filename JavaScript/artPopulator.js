@@ -167,14 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
       artType: 'Digital Art',
       reference: 'A page from a digital art project',
       date: '2023',
-    },
-    {
-      src: '../IMAGES/ART/page 24.jpg',
-      title: 'Page 24',
-      artType: 'Digital Art',
-      reference: 'A page from a digital art project',
-      date: '2023',
-    },  
+    }, 
     {
       src: '../IMAGES/ART/page 23.jpg',
       title: 'Page 23',
