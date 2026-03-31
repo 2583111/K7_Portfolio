@@ -1,4 +1,4 @@
-const root = " ";
+const root = "./K7_Portfolio ";
 
 export const menuItems = [
   { name: "HOME", href: `${root}/index.html` },
