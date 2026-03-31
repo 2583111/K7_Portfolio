@@ -28,7 +28,6 @@ export function initialise(currentPage) {
       // Exits the function early.
     }
     nav = document.createElement("nav");
-    nav.setAttribute("aria-hidden, true")
     // Creates a new <nav> element.
     // Ensure the nav is exposed to assistive technologies (do not hide it).
     // nav.setAttribute("aria-hidden", "true");
