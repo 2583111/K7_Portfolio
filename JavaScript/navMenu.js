@@ -1,4 +1,4 @@
-const root = "";
+const root = "../";
 // Defines a constant variable 'root' with the string value "..", which likely represents the root directory for URLs.
 
 export const menuItems = [
