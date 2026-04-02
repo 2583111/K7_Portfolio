@@ -6,7 +6,7 @@
   <meta name="description" content="Portfolio Homepage" />
   <meta name="author" content="Kesavan Naicker" />
   <meta name="keywords" content="Portfolio, Art, VR, Animations, About Me, K7" />
-  <title>Portfolio</title>
+  <title>VR PAGE</title>
 
   <!-- FONTS -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald" />
@@ -14,6 +14,9 @@
   <!--CSS -->
   <link rel="stylesheet" href="../CSS/Main_Style.CSS" />
   <link rel="stylesheet" href="../CSS/Footer_Style.CSS" />
+  <link rel="stylesheet" href="../CSS/VRPage_Style.CSS"/>
+  
+
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
@@ -24,6 +27,10 @@
     // create the DOM markup for the menu items first
     document.addEventListener("DOMContentLoaded", () => initialise("VR"));
   </script>
+    <script type="module" src="../JavaScript/buttonMorph.js"></script>
+
+  
+
 
   
 </head>
@@ -52,6 +59,35 @@
 </header>
 
   <main>
+
+     <div id="posterWrapper">
+
+       <div class="poster-item">
+
+           <a href="./ConnecTedVR.html">
+            <img class="posterIMG" src="../IMAGES/VR/Fantastic%204%20Poster.png" alt="Fantastic 4 Poster" />
+           </a>
+          <div class="connecTedOverlay">
+            <div class="overlay-title">ConnecTed</div>
+             <div class="overlay-date">2025</div>
+          </div> 
+              <div class="playButton" >
+                <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://w3.org">
+                     <circle cx="100" cy="100" r="90" fill="none" stroke="#89CC04" stroke-width="12" />
+                     <polygon points="100,20 170,140 30,140" fill="#89CC04" style="transform: rotate(90deg); transform-origin: center;" />
+                </svg>
+                
+           </div>
+       
+      </div>
+      
+        <img src="../IMAGES/VR/Fantastic%204%20Poster.png" alt="Fantastic 4 Poster" />
+        <img src="../IMAGES/VR/Fantastic%204%20Poster.png" alt="Fantastic 4 Poster" />
+        
+
+     </div>
+
+
 
 
   </main>

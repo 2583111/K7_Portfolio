@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio Homepage" />
+  <meta name="author" content="Kesavan Naicker" />
+  <meta name="keywords" content="Portfolio, Art, VR, Animations, About Me, K7" />
+  <title>ConnecTed VR</title>
+
+  <!-- FONTS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald" />
+
+  <!--CSS -->
+  <link rel="stylesheet" href="../CSS/Main_Style.CSS" />
+  <link rel="stylesheet" href="../CSS/Footer_Style.CSS" />
+  <link rel="stylesheet" href="../CSS/VRVideo_Style.CSS" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+
+    <!--Javascripts-->
+    <script type="module">
+    import { initialise } from "../JavaScript/navMenu.js";
+    // create the DOM markup for the menu items first
+    document.addEventListener("DOMContentLoaded", () => initialise("VR"));
+  </script>
+
+  
+</head>
+
+<body>
+<header>
+  <h1>PORTFOLIO</h1>
+
+  <!-- Burbger Menu -->
+  <!-- <h2>
+    <button class="hamburgBtn" id="menuButton" aria-controls="siteMenu" aria-expanded="false" aria-label="Toggle menu">
+      <svg class="burger" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true" focusable="false">
+        <path id="barTop"    d="M4 6 L20 6"  fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.6"/>
+        <path id="barMid"    d="M4 12 L20 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.6"/>
+        <path id="barBottom" d="M4 18 L20 18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.6"/>
+      </svg>
+    </button>
+  </h2> -->
+
+
+  <div class="slide-menu">
+    <nav aria-hidden="true"></nav>
+  </div>
+
+  
+</header>
+
+  <main>
+    <div class="video-description-container">
+    <iframe width="560" height="315"
+     src="https://www.youtube.com/embed/bq21fjhNz_8?si=fkV2w9pHbIfKx-V9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+
+    <div class="description">
+        <h2 class="title"> ConnecTed  </h2>
+            <p class="synopsis">
+               A stylized 3D VR experience that chronicles Uncle Ted's life, starting with his experiences and work life during his pivotal years as he navigates a transforming country.
+               The visitor will witness his most significant achievements and the struggles he faces while overcoming his toughest obstacles and life's unexpected challenges.
+            </p>
+            <a class="release-date">Release Date:  2025</a>
+    </div>
+    </div>
+
+
+    <div id="teamCards" >
+        <h3 class="team-title">Meet the Team</h3>
+    <div class="row">
+         <div class="column">
+           <div class="card">
+              <div class="container">
+                   <h2>Jade Tia Reddy</h2>
+                      <ul class="role">
+                        <li>Animator</li>
+                        <li>3D Artist</li>
+                        <li>Character Designer</li>
+                        <li>Video Editor</li>
+                        <li>Script Writer</li>
+                        <li>Audio Designer</li>
+                      </ul>
+                      <a href="mailto:Jadetiareddy@gmail.com">Jadetiareddy@gmail.com</a>
+                </div>
+            </div>
+         </div>
+  
+
+         <div class="column">
+           <div class="card">
+              <div class="container">
+                   <h2>Michael Anokye-Boateng</h2>
+                     <ul class="role">
+                        <li>Animator</li>
+                        <li>3D Artist</li>
+                        <li>Video Editor</li>
+                        <li>Script Writer</li>
+                        <li>Audio Designer</li>
+                     </ul>
+                      <a href="mailto:michael.anokyeboateng@gmail.com">michael.anokyeboateng@gmail.com</a>
+                </div>
+            </div>
+         </div>
+  
+
+         <div class="column">
+           <div class="card">
+              <div class="container">
+                   <h2>Chantelle Mashilo</h2>
+                      <ul class="role">
+                        <li>Animator</li>
+                        <li>3D Artist</li>
+                        <li>Character Designer</li>
+                        <li>Video Editor</li>
+                        <li>Script Writer</li>
+                        <li>Audio Designer</li>
+                      </ul>
+                      <a href="mailto:kcmashilo21@gmail.com">kcmashilo21@gmail.com</a>
+                </div>
+            </div>
+         </div>
+  
+
+         <div class="column">
+           <div class="card">
+              <div class="container">
+                   <h2>Kesavan Naicker/K7</h2>
+                    <ul class="role">
+                        <li>Animator</li>
+                        <li>3D Artist</li>
+                        <li>Video Editor</li>
+                        <li>Script Writer</li>
+                        <li>Audio Designer</li>
+                      </ul>
+                      <a href="mailto:usernametakenk7@gmail.com">usernametakenk7@gmail.com</a>
+                </div>
+            </div>
+         </div>
+ 
+
+    </div>
+    
+
+  
+
+
+
+  </main>
+
+<footer>
+    <div class="footer-center">
+      <strong>PORTFOLIO</strong> — built by K7
+    </div>
+</footer>
+
+
+
+
+
+</body>
+</html>
