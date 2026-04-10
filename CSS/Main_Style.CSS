@@ -16,9 +16,33 @@ main{
 
 h1{
     color: #89cc04;
+    font-family: "Oswald", sans-serif;
     text-align: center;
+    margin-left: 15px;
     font-size: 35px;
     letter-spacing: 3px;
+}
+
+.textContainer {
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(0deg, #89cc04, #94de00 50%, #080808 0);
+  background-size: 100% 200%;
+  background-position: 100% 0%;
+  color: #080808;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+h1:hover {
+  animation: pulse-zoom 3s ease-in-out infinite;
+  cursor: pointer; 
 }
 
 /* The side navigation menu */
@@ -39,22 +63,25 @@ h1{
   color: #89cc04;
   padding: 26px;
   text-align: center;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 .slide-menu a:hover:not(.active) {
-  color: #000000b1;
+  color: #000000;
+  text-transform: lowercase; /* lowercase only on hover, not active */
+  letter-spacing: 2px;
+  animation: bounce 0.5s ease-in-out;
+}
+
+.slide-menu a.active {
+  color: #000000;
+  text-transform: uppercase;
 }
 
 ul.slide-menu-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
-
-/* Active/current link */
-.slide-menu a.active {
-  color: #000000;
 }
 
 
@@ -64,4 +91,15 @@ div.content {
   margin-left: 200px;
   padding: 1px 16px;
   height: 1000px;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes pulse-zoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }

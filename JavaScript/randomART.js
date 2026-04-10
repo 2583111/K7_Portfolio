@@ -30,6 +30,10 @@ const selectedImages = shuffledImages.slice(0, numImagesToShow);
 const container = document.getElementById('imageWrapper');
 container.innerHTML = ''; // clear previous images
 
+function loadPage() {
+  window.location.href = './ART/index.html';
+}
+
 for (let i = 0; i < selectedImages.length; i++) {
   const randomContainer = document.createElement('div');
   randomContainer.className = 'randomContainer';
@@ -37,6 +41,7 @@ for (let i = 0; i < selectedImages.length; i++) {
   const img = document.createElement('img');
   img.src = selectedImages[i];
   img.alt = `Artwork image ${i + 1}`;
+  img.addEventListener('click', loadPage);
 
   randomContainer.appendChild(img);
   container.appendChild(randomContainer);

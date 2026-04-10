@@ -1,0 +1,43 @@
+.videoGallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 210px; /* space for side nav */
+  padding: 10px;
+}
+
+.videoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%; /* two per row with spacing */
+  margin: 10px;
+  background-color: #ffffff; /* optional */
+  border-radius: 8px;
+}
+
+.videoCard:hover {
+  transform: translateY(-5px);
+  background-color: #000000; /* optional hover effect */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+/* Optional: style videos */
+video {
+  width: 100%;
+}
+
+.title {
+  font-size: 1.25em;
+  text-align: left;
+  color: #89cc04;
+  margin: 0;
+}
+
+.date {
+  font-size: 0.75em;
+  color: #89cc04;
+  text-align: right;
+  font-style: italic;
+  margin: 0;
+}

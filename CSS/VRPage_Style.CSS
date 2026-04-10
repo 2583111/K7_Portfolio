@@ -106,6 +106,7 @@
 .poster-item:hover .playButton svg{
   transform: scale(1); /* Slightly zoom in on hover */
   transition: transform 0.3s ease; /* Smooth transition */
+  
 }
 
 /* Play button styling */
@@ -117,7 +118,7 @@
   width: 150px;
   height: 150px;
   cursor: pointer;
-  pointer-events: none;
+  pointer-events: none; /* allow clicking */
   opacity: 0;
   z-index: 10;
   display: flex;
@@ -128,7 +129,7 @@
 }
 
 .playButton svg{
-    transform: scale(.2);
+    transform: scale(.2) rotate(270deg);
 }
 
 
