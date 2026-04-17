@@ -1,0 +1,199 @@
+.about-me-container {
+  display: flex;
+  justify-content: center; /* Center the container horizontally */
+  align-items: flex-start; /* Align items to the top */
+  box-sizing: border-box;
+  padding-top: 120px;
+  text-align: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens if needed */
+  position: relative;
+}
+
+.album {
+	--album-size: 300px; /* Base size */
+	--vinyl-size: 280px; /* Base vinyl size */
+	--border-radius: 3px; /* Border radius */
+	--cover-translate: -10px; /* Translation for hover */
+	--cover-rotate: -2deg; /* Rotation for hover */
+	--vinyl-translate: 50%; /* Vinyl translation for hover */
+	--vinyl-rotate: 360deg; /* Vinyl rotation for hover */
+
+  position: absolute;
+  width: var(--album-size);
+  height: var(--album-size);
+  margin: 1rem 100px;
+  top: 220px;
+  left: 600px;
+  margin: 0;
+  padding: 0;
+
+    
+    
+
+}
+
+	.cover {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		border-radius: var(--border-radius);
+		overflow: hidden;
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+		z-index: 2;
+		transition: transform 0.5s ease-in-out; 
+    }
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+.cover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 1%, transparent 50%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.cover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+	
+
+	.vinyl {
+		position: absolute;
+		top: 05px;
+		
+		right: 0;
+		width: var(--vinyl-size);
+		height: var(--vinyl-size);
+		border-radius: 50%;
+		background: 
+			conic-gradient(from 50deg at 50% 50%, 
+				transparent 46%, 
+				rgba(255, 255, 255, 0.1) 48%, 
+				rgba(255, 255, 255, 0.15) 51%, 
+				transparent 56%),
+			conic-gradient(from 225deg at 50% 50%, 
+				transparent 46%, 
+				rgba(255, 255, 255, 0.1) 48%, 
+				rgba(255, 255, 255, 0.15) 51%, 
+				transparent 56%),
+			repeating-radial-gradient(circle, 
+				rgba(120, 120, 120, 0.1) 0%, 
+				rgba(192, 192, 192, 0.01) 1px, 
+				transparent 1px, 
+				transparent 4px),
+			black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: transform 0.5s ease-in-out;
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+		z-index: 1;
+    }
+
+		.vinyl-cover {
+			width: calc(var(--vinyl-size) / 2.8);
+			height: calc(var(--vinyl-size) / 2.8);
+			background-size: cover;
+			background-position: center;
+			border-radius: 50%;
+			box-shadow: 0 0 0 5px black;
+		}
+	
+
+	.album:hover .cover{
+		transform: translateX(var(--cover-translate)) rotate(var(--cover-rotate));
+	}
+
+	.album:hover .vinyl{
+		transform: translateX(var(--vinyl-translate)) rotate(var(--vinyl-rotate));
+		
+	}
+
+.album.open {
+	.cover {
+		transform: translateX(var(--cover-translate)) rotate(var(--cover-rotate));
+	}
+
+	.vinyl {
+       animation: spinThat 5s linear infinite;
+	}
+}
+
+
+.description{
+  width: 45%;
+  height: 85%;
+  padding-left: 80px;
+  margin-top: 40px; /* moves it down within the container */
+  border-color: black;
+  position: relative;
+  overflow: hidden;
+
+}
+
+
+.description h2{
+  font-family: 'Oswald';
+  font-size: 2em;
+  text-align: center;
+  padding-left: 30px;
+  color: #89cc04;
+
+}
+
+
+.K7-info{
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  border-radius: 9px;
+  width: 750px;
+  height: 500px;
+  pointer-events: none; /* Prevent interaction with the container */
+}
+
+.K7-info p{
+  font-size: 0.8em;
+  color: #000000; /* text color */
+  text-align: center;
+  font: 16px "Oswald", sans-serif;
+  box-sizing: content-box;
+
+
+}
+
+a{
+  color: #89cc04;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 25px;
+  pointer-events: visible;
+}
+
+
+@keyframes spinThat {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

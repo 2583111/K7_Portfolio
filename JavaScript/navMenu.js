@@ -6,7 +6,7 @@ export const menuItems = [
   { name: "ART", href: `${root}ART/index.html` },
   { name: "ANIMATION", href: `${root}ANIMATIONS/index.html` },
   { name: "VR", href: `${root}VR/index.html` },
-  { name: "GAMES", href: `${root}GAMES/index.html` },
+  //{ name: "GAMES", href: `${root}GAMES/index.html` },
   { name: "ABOUT ME", href: `${root}ABOUTME/index.html` },
 ];
 // Exports a constant array 'menuItems', each object representing a menu item with 'name' and 'href'.

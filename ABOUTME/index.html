@@ -8,12 +8,17 @@
   <meta name="keywords" content="Portfolio, Art, VR, Animations, About Me, K7" />
   <title>Portfolio</title>
 
+  <!--Favicon-->
+  <link rel="icon" type="image/icon" href="../IMAGES/ICONS/Favicon 2.png" />
+
+
   <!-- FONTS -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald" />
 
   <!--CSS -->
   <link rel="stylesheet" href="../CSS/Main_Style.CSS" />
   <link rel="stylesheet" href="../CSS/Footer_Style.CSS" />
+  <link rel="stylesheet" href="../CSS/AboutPage_Style.CSS"/>
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
@@ -22,15 +27,23 @@
     <script type="module">
     import { initialise } from "../JavaScript/navMenu.js";
     // create the DOM markup for the menu items first
-    document.addEventListener("DOMContentLoaded", () => initialise("ABOUTME"));
+    document.addEventListener("DOMContentLoaded", () => initialise("ABOUT ME"));
   </script>
+  <script type="module" src="../JavaScript/heroButton.js"></script>
+  <script type="module" src="../JavaScript/vinylAlbum.js"></script>
 
   
 </head>
 
 <body>
 <header>
-  <h1>PORTFOLIO</h1>
+  <button type="button">
+  <h1 class="textContainer">PORTFOLIO</h1>
+  </button>
+  <audio id="360Audio">
+    <source src="../AUDIO/brat 360 Sound Bite.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
   <!-- Burbger Menu -->
   <!-- <h2>
@@ -52,6 +65,51 @@
 </header>
 
   <main>
+
+    <div class="about-me-container">
+
+              <div class="K7-info">
+                <div class="description">
+                <h2>ABOUT ME</h2>
+                <p>
+                  <ul>
+                  Hi! I'm K7, an artist from South Africa who has a Bachelor of Arts in Digital Arts. 
+                  I'm a passionate and versatile artist with experience across various mediums, including (but not limited to) digital and traditional art, 
+                  game design, 3D modeling, animation, frontend web design, and virtual reality. 
+                  I'm a generalist with an interest in learning new ways to design and create art.
+                  </ul>
+
+                 <ul>
+                 For further info,  feel free to contact me at:
+                 </ul>
+                 
+                 <a href="mailto:usernametakenk7@gmail.com">usernametakenk7@gmail.com</a>
+                </p>
+              </div>
+                </div>
+              
+
+<div class="audio-hover">
+
+    <audio id="360Audio2">
+    <source src="../AUDIO/360 sound bite 2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+   </audio>
+
+          <button id="hover-btn" class="album" data-cover-url="../IMAGES/ALBUM/Album Cover Photo.jpg">
+            <div class="cover">
+              <img src="../IMAGES/ALBUM/Album Cover Photo.jpg" alt="Album Cover">
+            </div>
+               <div class="vinyl">
+			           <div class="vinyl-cover"></div>
+	  	         </div>
+          </button>
+           
+</div>
+
+               
+          
+    </div>
 
 
   </main>
