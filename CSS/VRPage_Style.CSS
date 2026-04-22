@@ -69,7 +69,7 @@
 
 .poster-item {
   position: relative; /* so overlay can be positioned absolutely within */
-  display: block; /* or block, depending on layout */
+  display: inline-block; /* or block, depending on layout */
   
 }
 .poster-item::after {
