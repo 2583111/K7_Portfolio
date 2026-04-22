@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1000; /* ensure it appears above other content */
+  
 }
 
 #modalImage {
@@ -51,3 +52,59 @@
   background-color: #89CC04;
   color: #ffffff;
 }
+
+/* Define separate keyframes for left-to-right and right-to-left animations */
+@keyframes shine-right {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes shine-left {
+  to {
+    background-position: -200% center;
+  }
+}
+
+
+
+@media (max-width: 650px) {
+  
+.prev {
+    background: linear-gradient(to right, #89CC04 20%, #000000 40%, #000000 60%, #000000 80%);
+    background-size: 200% auto;
+    color: transparent; /* for text gradient effect */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine-right 1s linear infinite; /* custom animation for right movement */
+    cursor: none;
+    font-size: 30px;
+    opacity: 0.5;
+  }
+
+  .next {
+    background: linear-gradient(to left, #89CC04 20%, #000000 40%, #000000 60%, #000000 80%);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine-left 1s linear infinite; /* custom animation for left movement */
+    cursor: none;
+    font-size: 30px;
+    opacity: 0.5;
+  }
+  
+
+  #modalOverlay {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+
+
+
+
+

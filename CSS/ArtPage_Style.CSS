@@ -122,3 +122,28 @@ body{
 
 }
 
+@media (max-width: 650px) {
+
+  #imageRow {
+  column-count: 1; /* Number of columns, adjust as needed */
+  column-gap: 10px; /* Space between columns */
+  margin-left: 0px; /* space for sidebar */
+  padding-top: 25%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.artBox .infoOverlay {
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* Container around each image to center it and restrict size if needed */
+.artBox {
+  display: flex;
+  width: 90%; /* full width in column, or set specific width */
+  margin-bottom: 20px; /* space between items vertically in columns */
+  justify-self: center;
+}
+
+}

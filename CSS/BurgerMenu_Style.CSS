@@ -1,0 +1,165 @@
+.icon-1, .icon-2, .icon-3 {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    width: 32px;
+    height: 4.5px;
+    border-radius: 3px;
+    background-color: #89CC04;
+    transition: all 400ms cubic-bezier(.84,.06,.52,1.8);
+}
+
+.icon-1 {
+  transform: translateY(-8px);
+  animation-delay: 100ms;
+}
+
+.icon-3 {
+  transform: translateY(8px);
+  animation-delay: 250ms;
+}
+
+.hamburger-icon {
+  position: absolute;
+  height: 66px;
+  width: 60px;
+  top: 10%;
+  left: 85%;
+  z-index: 1000;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.icon-1.a {
+  transform: rotate(40deg);
+  background-color: #ffffff;
+
+}
+.icon-3.b {
+  transform: rotate(-40deg);
+  background-color: #ffffff;
+
+}
+.icon-2.c {
+  opacity: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+@keyframes slideIn {
+  0% {
+    width: 0%;
+    transform: scale(.3);
+    opacity: 0;
+  }
+  
+  100% {
+    width: 50%;
+   transform:scale(1);
+    opacity: 1;
+  }
+}
+
+
+@keyframes shotup {
+  0% {
+    transform: translateY(300%) ;
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0%) ;
+    opacity: 1;
+  }
+}
+
+@keyframes slideDownBounce {
+    0% {
+    top: 70px; /* start above the view */
+    opacity: 0;
+  }
+  60% {
+    top: 150px; /* move slightly below final position for bounce */
+    opacity: 1;
+  }
+  80% {
+    top: 100px; /* bounce back above final position */
+  }
+  100% {
+    top: 120px; /* final position */
+    opacity: 1;
+
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 9%;
+  left: 0;
+  background: #000000;
+  height: 0%;
+  width: 100%;
+  transition: all 500ms cubic-bezier(.62,.04,.3,1.8);
+  transition-delay: 50ms;
+  z-index: -999;
+  opacity: 1;
+}
+
+.overlay  a{
+  display: none;
+
+}
+
+.overlay.slide {
+  height: 91%;
+  opacity: 1;
+  
+}
+
+header {
+  transition: background-color 0.5s ease;
+}
+
+
+body.overlay-active header {
+  background-color: #000000;
+}
+
+/* When overlay is inactive: delay before changing back */
+body.overlay-inactive header {
+  background-color: #ffffff;
+  transition-delay: 100s; 
+}
+
+.overlay.slide a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #89cc04;
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  padding: 26px;
+  text-decoration: none;
+  position: relative;
+  top: 120px;
+  margin: 0;  
+  /* Animate with bounce effect */
+  animation: slideDownBounce 600ms ease-out forwards;
+  /* Delay the start of the links appearing */
+  animation-delay: 0.2s; /* 1 second delay, adjust as needed */
+  opacity: 0;
+
+ }
+
+.overlay.slide a.active{
+    color: #ffffff;
+
+}

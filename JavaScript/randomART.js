@@ -6,15 +6,8 @@ const images = [
   './IMAGES/ART/Venipedes All the way down.png',
   './IMAGES/ART/page 44.jpg',
   './IMAGES/ART/page 40.jpg',
-
 ];
 
-// Set the maximum number of images
-const max = 5;
-// Generate a random images to show
-const numImagesToShow = Math.min(max, images.length);
-
-// Shuffle and select images
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -23,26 +16,43 @@ function shuffle(array) {
   return array;
 }
 
-const shuffledImages = shuffle([...images]);
-const selectedImages = shuffledImages.slice(0, numImagesToShow);
+function loadImages(maxImages) {
+  const container = document.getElementById('imageWrapper');
+  if (!container) return; // safety check
+  container.innerHTML = '';
 
-// Reference to the container
-const container = document.getElementById('imageWrapper');
-container.innerHTML = ''; // clear previous images
+  const shuffledImages = shuffle([...images]);
+  const selectedImages = shuffledImages.slice(0, Math.min(maxImages, images.length));
 
-function loadPage() {
-  window.location.href = './ART/index.html';
+  function loadPage() {
+    window.location.href = './ART/index.html';
+  }
+
+  for (let i = 0; i < selectedImages.length; i++) {
+    const randomContainer = document.createElement('div');
+    randomContainer.className = 'randomContainer';
+
+    const img = document.createElement('img');
+    img.src = selectedImages[i];
+    img.alt = `Artwork image ${i + 1}`;
+    img.addEventListener('click', loadPage);
+
+    randomContainer.appendChild(img);
+    container.appendChild(randomContainer);
+  }
 }
 
-for (let i = 0; i < selectedImages.length; i++) {
-  const randomContainer = document.createElement('div');
-  randomContainer.className = 'randomContainer';
-
-  const img = document.createElement('img');
-  img.src = selectedImages[i];
-  img.alt = `Artwork image ${i + 1}`;
-  img.addEventListener('click', loadPage);
-
-  randomContainer.appendChild(img);
-  container.appendChild(randomContainer);
+// Run on load
+function updateImages() {
+  if (window.matchMedia('screen and (max-width: 650px)').matches) {
+    loadImages(4);
+  } else {
+    loadImages(5);
+  }
 }
+
+// Initial load
+updateImages();
+
+// Optional: update on resize
+window.addEventListener('resize', updateImages);

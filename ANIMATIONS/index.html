@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="../CSS/Main_Style.CSS" />
   <link rel="stylesheet" href="../CSS/Footer_Style.CSS" />
   <link rel="stylesheet" href="../CSS/Anim_Style.CSS"/>
+  <link rel="stylesheet" href="../CSS/BurgerMenu_Style.CSS"/>
+
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
@@ -30,6 +32,7 @@
     document.addEventListener("DOMContentLoaded", () => initialise("ANIMATION"));
   </script>
   <script type="module" src="../JavaScript/heroButton.js"></script>
+  <script type="module" src="../JavaScript/burgerMenu.js"></script>
 
   
 </head>
@@ -49,15 +52,24 @@
   </nav>
 
   <!-- Burbger Menu -->
-  <!-- <h2>
-    <button class="hamburgBtn" id="menuButton" aria-controls="siteMenu" aria-expanded="false" aria-label="Toggle menu">
-      <svg class="burger" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true" focusable="false">
-        <path id="barTop"    d="M4 6 L20 6"  fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.6"/>
-        <path id="barMid"    d="M4 12 L20 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.6"/>
-        <path id="barBottom" d="M4 18 L20 18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.6"/>
-      </svg>
-    </button>
-  </h2> -->>
+  <div class="hamburger-icon" id="icon">
+    <div class="icon-1" id="a"></div>
+    <div class="icon-2" id="b"></div>
+    <div class="icon-3" id="c"></div>
+    <div class="clear"></div>
+  </div>
+ </div> 
+
+  <div class="overlay" id="curtain-overlay">
+      <a href="../index.html">HOME</a>
+      <a href="../ART/index.html">ART</a>
+      <a class="active" href="../ANIMATIONS/index.html">ANIMATION</a>
+      <a href="../VR/index.html">VR</a>
+      <!-- <a href="./GAMES/index.html">GAMES</a> -->
+      <a href="../ABOUTME/index.html">ABOUT ME</a>
+      
+  </div>
+  
 
 </header>
 

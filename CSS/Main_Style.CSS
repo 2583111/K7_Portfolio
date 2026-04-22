@@ -33,6 +33,11 @@ h1{
   color: #080808;
 }
 
+.hamburger-icon{
+  color: #89cc04;
+  display: none;
+}
+
 button {
     background: none;
     border: none;
@@ -103,3 +108,94 @@ div.content {
   50% { transform: scale(1.05); }
   100% { transform: scale(1); }
 }
+
+
+/* Responsiveness */
+@media (max-width: 650px) {
+
+
+
+main{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999; /* Ensures it is on top */
+}
+
+h1{
+    color: #000000;
+    font-family: "Oswald", sans-serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.head-Container{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+.hamburger-icon{
+  display: flex;
+}
+
+
+.textContainer {
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(0deg, #89cc04, #94de00 50%, #080808 0);
+  background-size: 100% 200%;
+  background-position: 100% 0%;
+  color: #080808;
+  z-index: 999; /* Ensures it is on top */
+
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+h1:hover {
+  animation: none;
+}
+
+/* The side navigation menu */
+.slide-menu, header {
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  height: auto;
+  z-index: 999; /* Ensures it is on top */
+
+}
+
+/* Sidebar links */
+.slide-menu a {
+  display: none;
+}
+
+
+ul.slide-menu-list {
+ display: none;
+}
+ 
+
+
+
+}
+

@@ -99,5 +99,3 @@ export function initialise(currentPage) {
   }
 
 }
-
-

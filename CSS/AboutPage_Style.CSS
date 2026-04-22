@@ -197,3 +197,85 @@ a{
 		transform: rotate(360deg);
 	}
 }
+
+/* Responsiveness */
+@media (max-width: 650px) {
+
+.about-me-container {
+  display: flex;
+  justify-content: center; /* Center the container horizontally */
+  align-items: flex-start; /* Align items to the top */
+  box-sizing: border-box;
+  text-align: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens if needed */
+  position: relative;
+}
+
+
+.K7-info{
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  border-radius: 9px;
+  width: 80%;
+  height: auto;
+  pointer-events: none; /* Prevent interaction with the container */
+}
+
+.description{
+  width: 90%;
+  height: auto;
+  padding-left: 0px;
+  margin-top: 0px; /* moves it down within the container */
+  border-color: black;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.description p{
+	padding-top: 200px;
+}
+
+.description h2{
+  font-family: 'Oswald';
+  font-size: 2em;
+  text-align: center;
+  padding-left: 30px;
+  color: #89cc04;
+
+}
+
+
+  .album{
+	
+  position: absolute;
+  width: 40%;
+  height: auto;
+  top: 25%;
+  left: 30%;
+  margin: 0;
+  padding: 0;
+  touch-action: none;
+
+
+  }
+
+  .album.open{
+	display: none;
+	  touch-action: none;
+
+  }
+
+  .album:hover{
+	display: none;
+	  touch-action: none;
+
+	
+  }
+
+
+ .vinyl{
+	display: none;
+}
+
+}

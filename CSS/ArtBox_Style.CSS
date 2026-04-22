@@ -207,3 +207,116 @@ path.two {
         fill: #000000;
     }
 }
+
+
+@media (max-width: 650px) {
+
+  #imageWrapper {
+
+
+  /* set your side-nav width here (override globally if needed) */
+  --side-nav-width: 0px;
+  --side-gap: 10px;
+
+  /* space from side nav + 10px gap */
+  margin-left: 10px;
+  max-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+    box-sizing: border-box;
+
+  column-count: 2;
+  gap: 10px; /* space between images */
+  padding-top: 90px;
+  align-items: center;
+  justify-content: center;
+
+  
+  }
+
+  #videoWrapper {
+  --side-nav-width: 0px;
+  max-width: 100%;
+  display: flex;
+  padding-top: 30px;
+  align-items: center;
+  justify-content: center;
+
+  }
+
+  #vrWrapper {
+  --side-nav-width: 0px;
+  display: flex;
+  padding-top: 30px;
+  align-items: center;
+  justify-content: center;
+
+ }
+
+  /* Optional: hide certain elements or adjust sizes further */
+  #imageWrapper img {
+    max-width: 100%;
+  }
+
+  #videoWrapper video {
+    max-width: 100%;
+  }
+
+  #vrWrapper iframe {
+
+  width: 325px; /* images will shrink to fit container width */
+  max-width: 100%;
+  height: 175px;    /* maintain aspect ratio */
+  }
+
+  .art-btn, .anim-btn, .vr-btn{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    color: #000000;
+    transform: skewX(-15deg);
+    transition: 0.5s;
+    
+  }
+
+  path.one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+
+path.two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+
+.art-btn path.three, .anim-btn path.three, .vr-btn path.three {
+    animation: color_anim 1s infinite 0.2s;
+}
+
+.art-btn path.one, .anim-btn path.one, .vr-btn path.one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+
+.art-btn path.two, .anim-btn path.two, .vr-btn path.two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+
+
+  .art-btn span,
+  .anim-btn span,
+  .vr-btn span {
+    transform: none;
+
+  }
+
+  .svg-arrow{
+    display: flex;
+    padding-top: 6px;
+    padding-left: 3px;
+ 
+  }
+
+}

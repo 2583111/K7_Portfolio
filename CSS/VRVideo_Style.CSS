@@ -169,5 +169,102 @@ a{
 }
 
 
+/* Responsiveness */
+@media (max-width: 650px) {
+.video-description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 0px;
+  padding-top: 30%;
+}
+
+iframe{
+  width: 95%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 12px;
+ 
+}
+ 
+  .description {
+    background-color: #ffffff;
+    width: 80%; /* make description take full width */
+    height: auto; /* let height adjust based on content */
+    padding-right: 10px;
+    font-family: 'Oswald';
+    color: #89cc04;
+    border-radius: 12px;
+    margin-top: 10px; /* space between iframe and description */
+    border: 1px solid black; /* fixed border style, use border property */
+    word-spacing: 2px;
+    overflow: hidden; /* optional, if content overflows */
+  }
+
+
+  #teamCards {
+    width: 100%;
+    display: grid; /* switch to grid layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    margin-top: 80px;
+    margin-left: 0;
+  }
+
+  /* Add some shadows to create a card effect */
+.card {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  border-radius: 9px;
+  width: 150%;
+  height: 100%;
+  margin-top: 30%;
+  display: flex;
+
+  
+}
+
+
+  h3.team-title {
+  font-family: 'Oswald';
+  color: #000000;
+  font-size: 2em;
+  text-decoration: underline;
+  position:absolute;
+  margin-left: 30%;
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 33px;
+  text-align: center;
+  
+}
+
+.role {
+  color: #89cc04;
+}
+
+
+ul.role {
+  margin-top: 10px;
+  text-align: left;
+  list-style-type: circle;
+
+}
+
+a{
+  color: #89cc04;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+  
+}
 
 
